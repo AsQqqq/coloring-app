@@ -1,11 +1,13 @@
 {
     "name": "coloring-app",
-    "version": "0.0.1",
-    "main": "main.js",
+    "version": "0.0.4",
+    "description": "Electron app for coloring images",
+    "main": "src/main.js",
     "scripts": {
-      "start": "electron ."
+        "start": "electron ."
     },
     "dependencies": {
-      "electron": "^25.0.0"
+        "electron": "^32.1.2",
+        "fabric": "^5.5.2"
     }
-  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Раскраска</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <h1>Раскрась свой мир!</h1>
+        <p>Кликай по цветам, чтобы выбрать, и по фигурам, чтобы раскрасить. Не понравилось? Нажми "Вернуть" или "Очистить"!</p>
+        
+        <div class="color-picker">
+            <div class="color-swatch" style="background-color: #FF6B6B" data-color="#FF6B6B"></div>
+            <div class="color-swatch" style="background-color: #4ECDC4" data-color="#4ECDC4"></div>
+            <div class="color-swatch" style="background-color: #FFD93D" data-color="#FFD93D"></div>
+            <div class="color-swatch" style="background-color: #6BCB77" data-color="#6BCB77"></div>
+            <div class="color-swatch" style="background-color: #FF8C42" data-color="#FF8C42"></div>
+            <div class="color-swatch" style="background-color: #D6A0FF" data-color="#D6A0FF"></div>
+            <div class="color-swatch" style="background-color: #FF5E78" data-color="#FF5E78"></div>
+            <div class="color-swatch" style="background-color: #1A535C" data-color="#1A535C"></div>
+            <input type="color" id="customColor" class="custom-color" title="Выбрать свой цвет">
+        </div>
+        
+        <div class="button-group">
+            <button id="undoButton" class="undo-button">Вернуть</button>
+            <button id="resetButton" class="reset-button">Очистить</button>
+        </div>
+        
+        <div class="coloring">
+            <svg id="drawing" xmlns="http://www.w3.org/2000/svg" width="700" viewBox="0 0 2275 1622" fill="#fff">
+                <rect id="part1" x="2.5" y="2.5" width="2270" height="1617" stroke="black" stroke-width="5"/>
+                <path id="part2" d="M702 244.5C832.715 244.5 938.5 330.999 938.5 437.5C938.5 544.001 832.715 630.5 702 630.5C571.285 630.5 465.5 544.001 465.5 437.5C465.5 330.999 571.285 244.5 702 244.5Z" stroke="black"/>
+                <path id="part3" d="M1637 246C1767.19 246 1872 332.097 1872 437.5C1872 542.903 1767.19 629 1637 629C1506.81 629 1402 542.903 1402 437.5C1402 332.097 1506.81 246 1637 246Z" stroke="black" stroke-width="4"/>
+                <path id="part4" d="M524 838.5L970 909C1143.5 885.5 1526.5 843.2 1670.5 862C1850.5 885.5 1987.5 1065.5 1952.5 1163C1917.5 1260.5 1385 1210 1170 1269C955 1328 751 1139.5 524 1120C342.4 1104.4 448.333 925.833 524 838.5Z" stroke="black" stroke-width="4"/>
+            </svg>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 60,
+                    "density": {
+                        "enable": true,
+                        "value": ")",
+                    }
+                },
+                "color": {
+                    "value": ["#FFE5B4", "#FFCAD4", "#FFD1DC"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.6,
+                    "random": true,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": false
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
